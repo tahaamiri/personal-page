@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.003" height="35.614" viewBox="0 0 39.003 35.614">
+  <defs>
+    <filter id="Icon_awesome-telegram-plane" x="0" y="0" width="39.003" height="35.614" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-telegram-plane)">
+    <path id="Icon_awesome-telegram-plane-2" data-name="Icon awesome-telegram-plane" d="M20.944,6.132l-3.17,14.947c-.239,1.055-.863,1.317-1.749.821L11.2,18.341l-2.33,2.241a1.213,1.213,0,0,1-.971.474l.347-4.918,8.951-8.088c.389-.347-.084-.539-.6-.192L5.524,14.824.76,13.333C-.276,13.01-.295,12.3.976,11.8L19.608,4.622c.863-.324,1.618.192,1.336,1.51Z" transform="translate(9 1.47)" fill="#00d6ff"/>
+  </g>
+</svg>
