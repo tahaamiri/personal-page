@@ -1,45 +1,34 @@
-import { ReactComponent as KNTU} from '../../assets/education/kntu.svg';
-import { ReactComponent as Location} from '../../assets/icons/location-on.svg';
+import { ResumeProps } from "./resume.interface"
+import { ReactComponent as Cerfificate } from '../../assets/icons/certificate.svg';
 
 
-export const Resume = () => {
-
-
+export const Resume = ({ startAndEnd, organization, title, discription, certificate }: ResumeProps) => {
     return (
-        <div className='mt-72'>
-            <div className='flex flex-col mb-14 justify-center items-center space-y-5'>
-                <h1 className='font-bold text-white text-5xl'>My Resume</h1>
-                <div className='flex space-x-2'>
-                    <div className='w-[50px] h-[3px] bg-[#707070] rounded-md'></div>
-                    <div className='w-[50px] h-[3px] bg-[#00D6FF] rounded-md'></div>
-                    <div className='w-[50px] h-[3px] bg-[#707070] rounded-md'></div>
+        <div className='flex justify-center items-center w-full'>
+            <div className='relative pl-5 pb-10 flex flex-col md:grid md:grid-cols-2'>
+                <div className='left-part w-[70%]'>
+                    <h5 className='text-white text-sm font-semibold'> {startAndEnd} </h5>
+                    <span className='text-gray-400 text-xs font-medium'> {organization} </span>
+                <div className='divider w-[1px] absolute top-0 left-0 md:left-[45%] bottom-0 bg-[#666]'>
+                    <div className='absolute top-2 -left-2 h-[15px] w-[15px] bg-[#222222] border-2 border-[#0099e5] rounded-full'></div>
                 </div>
-            </div>
-            
-            <div>
-                <div className='inline-flex flex-col'>
-                    <span className='text-white text-[40px] font-bold'>Education</span>
-                    <div className='w-full h-[3px] bg-[#00D6FF] rounded-md'></div>
                 </div>
-
-                <div className='flex items-center justify-between'>
-                    <KNTU />
-                    <div className='relative flex border-l-2 p-5'>
-                        <div className='absolute -left-3 h-[25px] w-[25px] bg-[#26252A] border-2 border-[#00D6FF] rounded-full'></div>
-                        <span className='text-white text-lg font-medium mx-10'>2017 - 2021</span>
-                        <div className='flex flex-col space-y-3'>
-                            <span className='text-white text-lg font-medium'>K. N. Toosi University Of Technology</span>
-                            <span className='text-white text-lg font-medium'>Bachelor's Degree, Computer Engineering</span>
-                        </div>
-                    </div>
-                    <div className='flex items-center'>
-                        <Location />
-                        <span className='text-white text-lg font-medium'>Tehran - Iran</span>
+                <div className='right-part max-w-[250px]'>
+                    <h4 className='text-white text-lg font-medium pr-4'> {title} </h4>
+                    <div>
+                        {discription && discription.map((item, index) => (
+                            <ul className='list-disc pl-4 mt-2'>
+                                <li>
+                                    <p className='text-[#d5d5d5] text-[.92em]' > {item} </p>
+                                </li>
+                            </ul>
+                        ))}
+                        {certificate && (
+                            <Cerfificate className="mt-5 fill-[#0099e5] w-20 cursor-pointer"/>
+                        )}
                     </div>
                 </div>
-
             </div>
-
         </div>
     )
 }
