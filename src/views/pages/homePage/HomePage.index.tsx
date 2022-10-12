@@ -12,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 import { Certifications } from '../../../components/certifications/certifications.index';
 import { Header } from '../../../components/header/header.index';
 import { Skils } from '../../../components/skils/skils.index';
+import { ContactMe } from '../../../components/contactMe/contactMe.index';
 
 
 
@@ -51,7 +52,7 @@ export const HomePage = () => {
                 </ul>
             </div>
 
-            {/* <Background className='absolute top-0 right-0' /> */}
+            <Background className='absolute top-0 right-0' />
             {/* <div className='absolute top-80 left-20'>
                 <div className=' flex flex-col justify-center'>
                     <Instagram />
@@ -79,6 +80,7 @@ export const HomePage = () => {
                 <Experience />
                 <Certifications />
                 <Skils />
+                <ContactMe />
             </div>
 
         </div>
