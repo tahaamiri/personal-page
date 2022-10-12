@@ -64,7 +64,7 @@ export const Skils = () => {
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center max-w-7xl'>
                     {
                         skils.map((skil) => (
-                            <div className='flex flex-col items-center'>
+                            <div className='flex flex-col items-center transition ease-in-out delay-75 hover:translate-x-0 hover:scale-110 duration-300'>
                                 <div className='relative w-24 h-24'>
                                     <div className='absolute top-0 w-20 h-20 bg-[#0099e5] rounded-lg'></div>
                                     <div className='flex justify-center items-center absolute top-3 left-2 w-20 h-20 backdrop-blur-xl rounded-lg'>

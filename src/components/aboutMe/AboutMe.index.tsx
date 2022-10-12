@@ -3,7 +3,7 @@ import { Header } from '../header/header.index'
 
 export const AboutMe = () => {
     return (
-        <div className='my-52'>
+        <div className='mb-52'>
             <Header title='About Me' />
             <div className='flex flex-col-reverse items-center justify-evenly md:flex-row'>
                 <div className='max-w-3xl flex flex-col mt-10 px-6'>
@@ -24,7 +24,7 @@ export const AboutMe = () => {
                     </p>
                     <button className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-[1em] font-medium bg-transparent border border-[#0099e5] self-start mt-5 text-white rounded-md px-4 py-3'>Download CV</button>
                 </div>
-                <img src={Personal} className=" animate__animated animate__fadeIn animate__delay-4s  transition-all w-full max-w-3xl max-h-[400px] object-cover rounded-md" alt="hi there, its me" />
+                <img src={Personal} className="w-full max-w-3xl max-h-[400px] object-cover rounded-md" alt="hi there, its me" />
             </div>
         </div>
     )
