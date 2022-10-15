@@ -1,4 +1,4 @@
-import {    useState } from 'react'
+import {    useRef, useState } from 'react'
 import { ReactComponent as Background } from '../../../assets/icons/frontenddeveloper.svg';
 import { ReactComponent as Menu } from '../../../assets/icons/menu.svg';
 import { AboutMe } from '../../../components/aboutMe/AboutMe.index';
@@ -16,7 +16,11 @@ import { Intro } from '../../../components/intro/intro.index';
 export const HomePage = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+    const myResume = useRef<any>();
+    const certifications = useRef<any>();
+    const skills = useRef<any>();
+    const contactMe = useRef<any>();
+    const aboutMe = useRef<any>();
 
     return (
         <div>
@@ -40,26 +44,31 @@ export const HomePage = () => {
                             </ul>
                         )
                     }
-                    <ul className='hidden md:flex w-full justify-evenly items-center text-lg font-bold text-[#949191] bg-transparent py-16'>
-                        <NavLink to={'home'} className='cursor-pointer'>Home</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>About me</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>My Resume</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>Skills</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>Portofilio</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>Blog</NavLink>
-                        <NavLink to={'home'} className='cursor-pointer'>Contact me</NavLink>
+                    <ul className='hidden md:flex w-full justify-between items-center text-lg font-bold text-[#949191] bg-transparent py-16'>
+                        {/* <button className='cursor-pointer'>Home</button> */}
+                        <button className='cursor-pointer' onClick={() => {aboutMe.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}} >About me</button>
+                        <button className='cursor-pointer' onClick={() => {myResume.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}>My Resume</button>
+                        <button className='cursor-pointer' onClick={() => {skills.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}} >Skills</button>
+                        <button className='cursor-pointer' >Portofilio</button>
+                        {/* <button className='cursor-pointer'>Blog</button> */}
+                        <button className='cursor-pointer' onClick={() => {contactMe.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}} >Contact me</button>
                     </ul>
                 </div>
                 <Intro />
             </div>
 
             <div className='md:px-20 lg:px-60 my-20'>
+                <div ref={aboutMe}></div>
                 <AboutMe />
+                <div ref={myResume}></div>
                 <Header title='My Resume' />
-                <Education />
+                <Education/>
                 <Experience />
+                <div ref={certifications}></div>
                 <Certifications />
+                <div ref={skills}></div>
                 <Skils />
+                <div ref={contactMe}></div>
                 <ContactMe />
             </div>
 

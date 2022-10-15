@@ -16,10 +16,10 @@ export const Intro = () => {
                 <span>Tehran</span>
             </div>
             <div className='flex justify-center py-5 space-x-2'>
-                <Github className='fill-[#0099e5] w-12 h-auto' />
-                <Instagram className='fill-[#0099e5] w-11 h-auto' />
-                <LinkedIn className='fill-[#0099e5] w-11 h-auto' />
-                <Telegram className='fill-[#0099e5] w-11 h-auto' />
+                <a href="https://github.com/tahaamiri"><Github className='fill-[#0099e5] w-12 h-auto transition ease-in-out delay-75 hover:translate-x-0 hover:scale-110 duration-300 hover:drop-shadow-2xl' /></a>
+                <a href="https://www.instagram.com/taha__amiriii/"><Instagram className='fill-[#0099e5] w-11 h-auto transition ease-in-out delay-75 hover:translate-x-0 hover:scale-110 duration-300 hover:drop-shadow-2xl' /></a>
+                <a href="https://www.linkedin.com/in/taha-amiri-041481168/"><LinkedIn className='fill-[#0099e5] w-11 h-auto transition ease-in-out delay-75 hover:translate-x-0 hover:scale-110 duration-300 hover:drop-shadow-2xl' /></a>
+                <a href="https://t.me/Amiri_taha"><Telegram className='fill-[#0099e5] w-11 h-auto transition ease-in-out delay-75 hover:translate-x-0 hover:scale-110 duration-300 hover:drop-shadow-2xl' /></a>
             </div>
         </div>
     )

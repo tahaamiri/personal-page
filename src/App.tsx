@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
     return (
-        <div className="relative">
+        <div className="relative bg-[#e6dfdf] dark:bg-[#222222]">
             <Routes>
                 <Route path="/" element={<HomePage />} />
             </Routes>

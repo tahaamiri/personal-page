@@ -18,12 +18,12 @@ export const Skils = () => {
             title: "React"
         },
         {
-            img: Tailwind,
-            title: "Tailwind"
+            img: Electron,
+            title: "Electron"
         },
         {
-            img: Git,
-            title: "Git"
+            img: Redux,
+            title: "Redux"
         },
         {
             img: JavaScript,
@@ -34,25 +34,26 @@ export const Skils = () => {
             title: "Typescript"
         },
         {
-            img: Electron,
-            title: "Electron"
+            img: Next,
+            title: "Next js"
         },
         {
-            img: Python,
-            title: "Python"
-        },
-        {
-            img: Redux,
-            title: "Redux"
+            img: Tailwind,
+            title: "Tailwind"
         },
         {
             img: Bootstrap,
             title: "Bootstrap"
         },
         {
-            img: Next,
-            title: "Next js"
+            img: Python,
+            title: "Python"
         },
+        {
+            img: Git,
+            title: "Git"
+        },
+
     ];
 
 
