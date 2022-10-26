@@ -6,14 +6,14 @@ export const Resume = ({ startAndEnd, organization, title, discription, certific
     return (
         <div className='flex justify-center items-center w-full max-w-2xl mx-auto'>
             <div className='relative w-full pl-5 flex flex-col md:grid md:grid-cols-2'>
-                <div className='pb-10  w-[70%]'>
+                <div className='pb-4 w-[70%]'>
                     <h5 className='text-white text-sm font-semibold'> {startAndEnd} </h5>
                     <span className='text-gray-400 text-xs font-medium'> {organization} </span>
-                </div>
-                <div className='relative pb-10'>
-                    <div className='divider w-[1px] absolute top-0 left-0 md:-left-10 bottom-0 bg-[#666]'>
+                    <div className='w-[1px] absolute top-0 left-0 md:left-[40%]  bottom-0 bg-[#666]'>
                         <div className='absolute top-2 -left-2 h-[15px] w-[15px] bg-[#222222] border-2 border-[#0099e5] rounded-full'></div>
                     </div>
+                </div>
+                <div className='pb-10'>
                     <h4 className='text-white text-lg font-medium pr-4'> {title} </h4>
                     <div>
                         {discription && discription.map((item, index) => (

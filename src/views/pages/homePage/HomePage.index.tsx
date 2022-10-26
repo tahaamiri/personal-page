@@ -1,15 +1,15 @@
-import {    useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { ReactComponent as Background } from '../../../assets/icons/frontenddeveloper.svg';
 import { ReactComponent as Menu } from '../../../assets/icons/menu.svg';
 import { AboutMe } from '../../../components/aboutMe/AboutMe.index';
 import { Experience } from '../../../components/experience/experience.index';
 import { Education } from '../../../components/education/education.index';
-import { NavLink } from 'react-router-dom';
 import { Certifications } from '../../../components/certifications/certifications.index';
 import { Header } from '../../../components/header/header.index';
 import { Skils } from '../../../components/skils/skils.index';
 import { ContactMe } from '../../../components/contactMe/contactMe.index';
 import { Intro } from '../../../components/intro/intro.index';
+import { Portofilio } from '../../../components/portofilio/portofilio.index';
 
 
 
@@ -23,10 +23,10 @@ export const HomePage = () => {
     const aboutMe = useRef<any>();
 
     return (
-        <div>
-            <Background className='absolute top-0 right-0 -z-10' />
+        <div className='bg-[#e6dfdf] dark:bg-[#222222]'>
+            <Background className='absolute top-10 right-0 -z-10' />
             <div className='h-screen overflow-x-hidden'>
-                <div className='p-5 md:px-20 xl:px-60 z-10'>
+                <div className='p-5 md:px-20 xl:px-60  shadow-sm z-10'>
                     <Menu
                         className='fill-white md:hidden'
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -50,28 +50,27 @@ export const HomePage = () => {
                         <button className='cursor-pointer' onClick={() => {myResume.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}>My Resume</button>
                         <button className='cursor-pointer' onClick={() => {skills.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}} >Skills</button>
                         <button className='cursor-pointer' >Portofilio</button>
-                        {/* <button className='cursor-pointer'>Blog</button> */}
                         <button className='cursor-pointer' onClick={() => {contactMe.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}} >Contact me</button>
                     </ul>
                 </div>
                 <Intro />
             </div>
 
-            <div className='md:px-20 lg:px-60 my-20'>
+            <div className='md:px-20 lg:px-60 mt-20'>
                 <div ref={aboutMe}></div>
                 <AboutMe />
                 <div ref={myResume}></div>
-                <Header title='My Resume' />
+                <Header title='My Resume'/>
                 <Education/>
                 <Experience />
                 <div ref={certifications}></div>
                 <Certifications />
                 <div ref={skills}></div>
                 <Skils />
+                <Portofilio />
                 <div ref={contactMe}></div>
                 <ContactMe />
             </div>
-
         </div>
     )
 }
